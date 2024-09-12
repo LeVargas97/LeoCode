@@ -1,0 +1,208 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOGytmcZl/HL7SSxQ0je+/4",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/LeVargas97/LeoCode/blob/main/Exercicio%20Aula%202\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "import pandas as pd"
+      ],
+      "metadata": {
+        "id": "Brb7lx4GxbRj"
+      },
+      "execution_count": 36,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 37,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0uekfAUVwPBA",
+        "outputId": "b3d46dea-675a-45e1-95ff-2969fdc0341a"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[22 24 26 27 23 21 25]\n"
+          ]
+        }
+      ],
+      "source": [
+        "  temp = np.array([22,24,26,27,23,21,25])\n",
+        "\n",
+        "  print(temp)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "mediaTemp = np.median(temp)\n",
+        "\n",
+        "print(\"A temperatura media da semana é: \", mediaTemp)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "vdh-7rzQxHp2",
+        "outputId": "2251e9db-31c4-404e-d4eb-76d2c5dded13"
+      },
+      "execution_count": 38,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "A temperatura media da semana é:  24.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "tempMax = np.max(temp)\n",
+        "tempMin = np.min(temp)\n",
+        "\n",
+        "print(\"A temperatura Maxima da semana é: \",tempMax)\n",
+        "print(\"A temperatura Minima da semana é: \",tempMin)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6AnOuxNYxvax",
+        "outputId": "8f2fe4df-24b8-44a5-da40-f44ff6c9288e"
+      },
+      "execution_count": 39,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "A temperatura Maxima da semana é:  27\n",
+            "A temperatura Minima da semana é:  21\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "tempMaior = temp[temp > 25]\n",
+        "\n",
+        "print (\"A temperatura maior que 25º desta semana é: \",tempMaior)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "J_GHXRpUyHmU",
+        "outputId": "fb89c963-8409-414f-a148-410ce0b3be42"
+      },
+      "execution_count": 40,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "A temperatura maior que 25º desta semana é:  [26 27]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "tempMais = temp + 2\n",
+        "\n",
+        "print (\"A temperatura acrececentado 2 graus nesta semana é: \",tempMais)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5n18G4gQzNFV",
+        "outputId": "3f63822c-9d55-44cb-d57a-6e3e8e8ff8ad"
+      },
+      "execution_count": 45,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "A temperatura acrececentado 2 graus nesta semana é:  [24 26 28 29 25 23 27]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"A temperatura media da semana é: \", mediaTemp)\n",
+        "desvio = np.std(temp)\n",
+        "print(\"O desvio padrão é: \", desvio)\n",
+        "medianaTemp = np.median(temp)\n",
+        "print(\"A mediana é: \", medianaTemp)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "RYyxIraazTqU",
+        "outputId": "d258be14-4f6b-4f03-d90d-3887e5d3d8cd"
+      },
+      "execution_count": 42,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "A temperatura media da semana é:  24.0\n",
+            "O desvio padrão é:  2.0\n",
+            "A mediana é:  24.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "81Sp0BMo1FuL"
+      },
+      "execution_count": 42,
+      "outputs": []
+    }
+  ]
+}
